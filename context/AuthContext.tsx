@@ -37,15 +37,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
       });
       const { token, refreshToken } = response.data;
 
-      // setCookie(undefined, "nextauth.token", token, {
-      //   maxAge: 60 * 60 * 24 * 30,
-      //   path: "/",
-      // });
+      setCookie(undefined, "nextauth.token", token, {
+        maxAge: 60 * 60 * 24 * 30,
+        path: "/",
+      });
 
-      // setCookie(undefined, "nextauth.refreshToken", refreshToken, {
-      //   maxAge: 60 * 60 * 24 * 30,
-      //   path: "/",
-      // });
+      setCookie(undefined, "nextauth.refreshToken", refreshToken, {
+        maxAge: 60 * 60 * 24 * 30,
+        path: "/",
+      });
 
       setUser({ email });
 
